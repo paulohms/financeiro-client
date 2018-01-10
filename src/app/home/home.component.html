@@ -1,0 +1,57 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="mensagem-boas-vindas">
+            Seja Bem Vindo!
+        </div>
+    </div>
+    <div class="panel-body tabela-resultados">
+    <div class="alert alert-success" role="alert" *ngIf="mensagemSucesso">{{ mensagemSucesso }}</div>
+    <div class="alert alert-danger" role="alert" *ngIf="mensagemError">{{ mensagemError }}</div>
+    <div class="botao-novo">
+      <button type="button" class="btn btn-primary" routerLink="/financas">Novo</button>
+    </div>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Decrição</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let financa of financas">
+          <td>{{ financa.descricao }}</td>
+          <td class="text-right">
+            <div class="color-red" *ngIf="financa.tipo == 'DESPESA'">
+              - {{financa.valor | currency:'BRL':true}}
+                <a class="btn btn-link btn-xs" title="Excluir" rel="tooltip" data-placement="top"
+                (click)="deletar(financa)">
+                <span class="glyphicon glyphicon-trash"></span>
+                </a>
+              </div>
+            <div *ngIf="financa.tipo == 'RECEITA'">
+                {{financa.valor | currency:'BRL':true}}
+                <a class="btn btn-link btn-xs" title="Excluir" rel="tooltip" data-placement="top"
+                (click)="deletar(financa)">
+                <span class="glyphicon glyphicon-trash"></span>
+                </a>
+              </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="isDataAvailable">
+    <div class="grafico">
+        <div class="grafico-pie">
+          <canvas baseChart 
+          [data]="pieChartData" 
+          [labels]="pieChartLabels" 
+          [chartType]="pieChartType" 
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+    </div>
+  </div>
+</div>

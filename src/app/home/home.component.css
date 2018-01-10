@@ -1,0 +1,36 @@
+.grafico-pie{
+    max-width: 40%;
+    display: table; 
+    padding-left: 30%;
+    padding-top: 8%;
+}
+
+.tabela-resultados{
+    width: 50%;
+    float: left;
+    padding-top: 6%;
+    padding-left: 6%;
+}
+
+.grafico{
+    width: 50%;
+    float: right;
+}
+
+.conteudo-home{
+    width: 100%;
+    padding-top: 5%;
+}
+
+.botao-novo{
+    padding-bottom: 12px;
+}
+
+.mensagem-boas-vindas{
+    text-align: center;
+    font-size: 17px;
+}
+
+.color-red{
+    color:red;
+}
