@@ -16,7 +16,7 @@ Certifique-se que o angular CLI esteja instalado
 
 **ng –v**
 
-Faça o clone do projeto e acesse a pasta do projeto. Em seguida execute o comando
+Faça o clone e acesse a pasta do projeto. Em seguida execute o comando
 
 **npm install**
 
