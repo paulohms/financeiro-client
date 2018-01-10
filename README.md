@@ -2,7 +2,7 @@
 
 Projeto financeiro-client gerado pelo Angular CLI. Antes de executar este projeto exponha os serviços REST do projeto [financeiro-server](https://github.com/paulohms/financeiro-server).
 
-### Passo a passo para execução
+## Passo a passo para execução
 
 Certifique-se que o node esteja instalado
 
