@@ -23,3 +23,5 @@ Faça o clone e acesse a pasta do projeto. Em seguida execute o comando
 Depois suba o servidor executando o comando
 
 **ng serve**
+
+Acesse o projeto através da URL [http://localhost:4200/](http://localhost:4200/)
